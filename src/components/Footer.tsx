@@ -1,7 +1,9 @@
 import { CONTENT } from "@/content";
+import { Year } from "@/components/Year";
 
 export function Footer() {
   const { footer } = CONTENT;
+  const initialYear = new Date().getFullYear();
 
   return (
     <footer className="fixed inset-x-0 bottom-0 z-10 px-6 pb-6 sm:px-8">
@@ -10,7 +12,10 @@ export function Footer() {
           <p>
             {footer.name} — {footer.age}
           </p>
-          <p>{footer.copyright}</p>
+          <p>
+            {footer.copyrightPrefix}
+            <Year initialYear={initialYear} />
+          </p>
         </div>
 
         <nav aria-label="Social links, column one" className="micro-label text-ink">

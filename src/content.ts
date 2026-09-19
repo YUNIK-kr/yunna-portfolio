@@ -10,8 +10,8 @@ export type MicroLabel = {
 
 export const CONTENT = {
   meta: {
-    title: "Yunna — Designer",
-    description: "Portfolio of Yunna, brand and product designer.",
+    title: "Yunna — Founder",
+    description: "Portfolio of Yunna, brand and product founder.",
   },
   hero: {
     line1: "HI, WELCOME",
@@ -19,7 +19,7 @@ export const CONTENT = {
     line2: "IT'S ME — YUNNA®",
     disciplineOne: "BRAND,",
     disciplineTwo: "PRODUCT,",
-    role: "DESIGNER",
+    role: "FOUNDER",
   },
   avatar: {
     src: "/avatar.jpg",
@@ -37,18 +37,18 @@ export const CONTENT = {
     } satisfies MicroLabel,
     aside: {
       line1: "IN THE END, I'M",
-      line2: "JUST A DESIGNER",
+      line2: "JUST A FOUNDER",
     } satisfies MicroLabel,
   },
   portrait: {
     src: "/placeholder.jpg",
     alt: "Black and white photobooth portrait of Yunna, cropped tall",
   },
-  wordmark: "YUNNA®—'26",
+  wordmarkPrefix: "YUNNA®—'",
   footer: {
     name: "Yunna",
     age: "24",
-    copyright: "@Copyright 2026",
+    copyrightPrefix: "@Copyright ",
     linksColumnOne: [
       { label: "Instagram", href: "https://instagram.com/" },
       { label: "Dribbble", href: "https://dribbble.com/" },
