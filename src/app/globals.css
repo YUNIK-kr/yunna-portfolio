@@ -53,22 +53,6 @@ body {
   clip-path: inset(0 0 0% 0);
 }
 
-.headline-reveal .reveal-line:nth-child(1) {
-  transition-delay: 0ms;
-}
-.headline-reveal .reveal-line:nth-child(2) {
-  transition-delay: 60ms;
-}
-.headline-reveal .reveal-line:nth-child(3) {
-  transition-delay: 120ms;
-}
-.headline-reveal .reveal-line:nth-child(4) {
-  transition-delay: 180ms;
-}
-.headline-reveal .reveal-line:nth-child(5) {
-  transition-delay: 240ms;
-}
-
 .micro-fade {
   opacity: 0;
   transition: opacity 400ms ease;

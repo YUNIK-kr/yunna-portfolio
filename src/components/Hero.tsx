@@ -3,60 +3,80 @@ import { Avatar } from "@/components/Avatar";
 import { HeadlineReveal } from "@/components/HeadlineReveal";
 import { MicroLabel } from "@/components/MicroLabel";
 
+const labelWidth = "clamp(120px, 15vw, 220px)";
+const lineSizeSmall = "clamp(26px, min(7.2vw, 9svh), 132px)";
+const lineSizeLarge = "clamp(34px, min(9.5vw, 11.5svh), 168px)";
+
 export function Hero() {
   return (
-    <section className="relative flex min-h-svh flex-col justify-start px-6 pt-24 sm:px-8 md:pt-16">
+    <section className="relative flex flex-col justify-start overflow-x-clip px-6 pt-24 sm:px-8 md:min-h-svh md:pt-16">
       <HeadlineReveal>
-        <div className="relative ml-auto flex w-full max-w-[1600px] flex-col items-end text-right text-ink md:w-[92%]">
-          {/* Line 1 */}
-          <h1 className="w-full">
-            <span
-              className="reveal-line display-line block text-[clamp(32px,7.2vw,132px)]"
-              style={{ width: "100%" }}
-            >
-              {CONTENT.hero.line1}{" "}
-              <Avatar />{" "}
-              {CONTENT.hero.avatarConnector}
+        <div className="flex w-full max-w-[1700px] flex-col md:ml-auto md:w-[92%]">
+          <h1 className="flex flex-col text-ink">
+            {/* Line 1 */}
+            <span className="flex justify-start md:justify-end">
+              <span
+                className="reveal-line display-line text-left md:text-right"
+                style={{ transitionDelay: "0ms", fontSize: lineSizeSmall }}
+              >
+                {CONTENT.hero.line1}{" "}
+                <Avatar />{" "}
+                {CONTENT.hero.avatarConnector}
+              </span>
             </span>
 
             {/* Line 2 */}
-            <span
-              className="reveal-line display-line block text-[clamp(32px,7.2vw,132px)]"
-              style={{ width: "92%", marginLeft: "auto" }}
-            >
-              {CONTENT.hero.line2}
+            <span className="flex justify-start md:justify-end">
+              <span
+                className="reveal-line display-line text-left md:text-right"
+                style={{ transitionDelay: "60ms", fontSize: lineSizeSmall }}
+              >
+                {CONTENT.hero.line2}
+              </span>
             </span>
 
-            {/* Line 3 */}
-            <span className="relative block" style={{ width: "80%", marginLeft: "auto" }}>
-              <span className="reveal-line display-line block text-[clamp(40px,9.5vw,170px)]">
+            {/* Line 3 — micro-label hangs off the right */}
+            <span className="relative flex justify-start md:justify-end md:pr-[clamp(0px,17vw,280px)]">
+              <span
+                className="reveal-line display-line text-left md:text-right"
+                style={{ transitionDelay: "120ms", fontSize: lineSizeLarge }}
+              >
                 {CONTENT.hero.disciplineOne}
               </span>
               <MicroLabel
                 label={CONTENT.microLabels.services}
-                className="absolute right-full top-0 mr-4 hidden w-40 md:block"
+                className="absolute right-0 top-0 hidden md:block"
+                style={{ width: labelWidth }}
               />
             </span>
 
-            {/* Line 4 */}
-            <span className="relative block" style={{ width: "64%", marginLeft: "auto" }}>
-              <span className="reveal-line display-line block text-[clamp(40px,9.5vw,170px)]">
+            {/* Line 4 — micro-label hangs off the left */}
+            <span className="relative flex justify-start md:justify-end md:pl-[clamp(0px,19vw,300px)]">
+              <span
+                className="reveal-line display-line text-left md:text-right"
+                style={{ transitionDelay: "180ms", fontSize: lineSizeLarge }}
+              >
                 {CONTENT.hero.disciplineTwo}
               </span>
               <MicroLabel
                 label={CONTENT.microLabels.disciplines}
-                className="absolute right-full top-0 mr-4 hidden w-40 md:block"
+                className="absolute left-0 top-0 hidden md:block"
+                style={{ width: labelWidth }}
               />
             </span>
 
-            {/* Line 5 */}
-            <span className="relative block" style={{ width: "48%", marginLeft: "auto" }}>
-              <span className="reveal-line display-line block text-[clamp(40px,9.5vw,170px)]">
+            {/* Line 5 — micro-label hangs off the right */}
+            <span className="relative flex justify-start md:justify-end md:pr-[clamp(0px,17vw,280px)]">
+              <span
+                className="reveal-line display-line text-left md:text-right"
+                style={{ transitionDelay: "240ms", fontSize: lineSizeLarge }}
+              >
                 {CONTENT.hero.role}
               </span>
               <MicroLabel
                 label={CONTENT.microLabels.aside}
-                className="absolute left-full top-0 ml-4 hidden w-40 text-left md:block md:text-right"
+                className="absolute right-0 top-0 hidden md:block"
+                style={{ width: labelWidth }}
               />
             </span>
           </h1>

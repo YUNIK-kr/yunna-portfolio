@@ -24,7 +24,7 @@ export const CONTENT = {
   avatar: {
     src: "/avatar.jpg",
     hoverSrc: "/avatar-hover.jpg",
-    alt: "Portrait of Yunna",
+    alt: "Black and white photobooth portrait of Yunna",
   },
   microLabels: {
     services: {
@@ -42,7 +42,7 @@ export const CONTENT = {
   },
   portrait: {
     src: "/placeholder.jpg",
-    alt: "Yunna seated for a studio portrait",
+    alt: "Black and white photobooth portrait of Yunna, cropped tall",
   },
   wordmark: "YUNNA®—'26",
   footer: {
