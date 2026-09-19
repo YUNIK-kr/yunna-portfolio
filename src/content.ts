@@ -11,14 +11,12 @@ export type MicroLabel = {
 export const CONTENT = {
   meta: {
     title: "Yunna — Founder",
-    description: "Portfolio of Yunna, brand and product founder.",
+    description: "Portfolio of Yunna, founder.",
   },
   hero: {
     line1: "HI, WELCOME",
     avatarConnector: "HOME",
     line2: "IT'S ME — YUNNA®",
-    disciplineOne: "BRAND,",
-    disciplineTwo: "PRODUCT,",
     role: "FOUNDER",
   },
   avatar: {
@@ -27,14 +25,6 @@ export const CONTENT = {
     alt: "Black and white photobooth portrait of Yunna",
   },
   microLabels: {
-    services: {
-      line1: "IDENTITY, ART DIRECTION",
-      line2: "UI, WEBSITES",
-    } satisfies MicroLabel,
-    disciplines: {
-      line1: "PACKAGING, PRINT",
-      line2: "ICONS, ASSETS",
-    } satisfies MicroLabel,
     aside: {
       line1: "IN THE END, I'M",
       line2: "JUST A FOUNDER",
@@ -50,16 +40,14 @@ export const CONTENT = {
     age: "24",
     copyrightPrefix: "@Copyright ",
     linksColumnOne: [
-      { label: "Instagram", href: "https://instagram.com/" },
-      { label: "Dribbble", href: "https://dribbble.com/" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/in/yunnajo/" },
     ] satisfies FooterLink[],
     linksColumnTwo: [
-      { label: "Twitter", href: "https://twitter.com/" },
-      { label: "VSCO", href: "https://vsco.co/" },
+      { label: "Email", href: "mailto:yunna.song.jo@gmail.com" },
     ] satisfies FooterLink[],
     talk: {
       label: "Let's talk",
-      href: "mailto:hello@yunna.design",
+      href: "mailto:yunna.song.jo@gmail.com",
     } satisfies FooterLink,
   },
 } as const;
